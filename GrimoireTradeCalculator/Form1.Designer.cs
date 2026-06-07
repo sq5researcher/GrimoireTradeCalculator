@@ -54,6 +54,7 @@
             numericUpDown11 = new NumericUpDown();
             button1 = new Button();
             groupBox2 = new GroupBox();
+            richTextBox1 = new RichTextBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
@@ -66,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown11).BeginInit();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // comboBox1
@@ -114,7 +116,7 @@
             numericUpDown10.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown10.Name = "numericUpDown10";
             numericUpDown10.Size = new Size(47, 23);
-            numericUpDown10.TabIndex = 1;
+            numericUpDown10.TabIndex = 10;
             // 
             // numericUpDown5
             // 
@@ -122,7 +124,7 @@
             numericUpDown5.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown5.Name = "numericUpDown5";
             numericUpDown5.Size = new Size(47, 23);
-            numericUpDown5.TabIndex = 1;
+            numericUpDown5.TabIndex = 5;
             // 
             // label10
             // 
@@ -148,7 +150,7 @@
             numericUpDown9.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown9.Name = "numericUpDown9";
             numericUpDown9.Size = new Size(47, 23);
-            numericUpDown9.TabIndex = 1;
+            numericUpDown9.TabIndex = 9;
             // 
             // numericUpDown4
             // 
@@ -156,7 +158,7 @@
             numericUpDown4.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown4.Name = "numericUpDown4";
             numericUpDown4.Size = new Size(47, 23);
-            numericUpDown4.TabIndex = 1;
+            numericUpDown4.TabIndex = 4;
             // 
             // label9
             // 
@@ -182,7 +184,7 @@
             numericUpDown8.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown8.Name = "numericUpDown8";
             numericUpDown8.Size = new Size(47, 23);
-            numericUpDown8.TabIndex = 1;
+            numericUpDown8.TabIndex = 8;
             // 
             // numericUpDown3
             // 
@@ -190,7 +192,7 @@
             numericUpDown3.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown3.Name = "numericUpDown3";
             numericUpDown3.Size = new Size(47, 23);
-            numericUpDown3.TabIndex = 1;
+            numericUpDown3.TabIndex = 3;
             // 
             // label8
             // 
@@ -216,7 +218,7 @@
             numericUpDown7.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown7.Name = "numericUpDown7";
             numericUpDown7.Size = new Size(47, 23);
-            numericUpDown7.TabIndex = 1;
+            numericUpDown7.TabIndex = 7;
             // 
             // numericUpDown2
             // 
@@ -224,7 +226,7 @@
             numericUpDown2.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(47, 23);
-            numericUpDown2.TabIndex = 1;
+            numericUpDown2.TabIndex = 2;
             // 
             // label7
             // 
@@ -250,7 +252,7 @@
             numericUpDown6.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
             numericUpDown6.Name = "numericUpDown6";
             numericUpDown6.Size = new Size(47, 23);
-            numericUpDown6.TabIndex = 1;
+            numericUpDown6.TabIndex = 6;
             // 
             // label6
             // 
@@ -291,27 +293,42 @@
             // 
             numericUpDown11.Location = new Point(131, 155);
             numericUpDown11.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDown11.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown11.Name = "numericUpDown11";
             numericUpDown11.Size = new Size(41, 23);
-            numericUpDown11.TabIndex = 3;
+            numericUpDown11.TabIndex = 11;
+            numericUpDown11.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // button1
             // 
             button1.Location = new Point(208, 155);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
+            button1.TabIndex = 12;
             button1.Text = "計算";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(richTextBox1);
             groupBox2.Location = new Point(18, 194);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(486, 244);
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "計算結果";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(7, 22);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.ScrollBars = RichTextBoxScrollBars.Vertical;
+            richTextBox1.Size = new Size(473, 216);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.TabStop = false;
+            richTextBox1.Text = "";
             // 
             // Form1
             // 
@@ -327,7 +344,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            Text = "グリモアトレード計算機";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -342,6 +359,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown11).EndInit();
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -374,5 +392,6 @@
         private NumericUpDown numericUpDown11;
         private Button button1;
         private GroupBox groupBox2;
+        private RichTextBox richTextBox1;
     }
 }
