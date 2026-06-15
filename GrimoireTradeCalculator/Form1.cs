@@ -51,5 +51,19 @@ namespace GrimoireTradeCalculator
             }
             richTextBox1.Text = builder.ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = 0;
+            numericUpDown2.Value = 0;
+            numericUpDown3.Value = 0;
+            numericUpDown4.Value = 0;
+            numericUpDown5.Value = 0;
+            numericUpDown6.Value = 0;
+            numericUpDown7.Value = 0;
+            numericUpDown8.Value = 0;
+            numericUpDown9.Value = 0;
+            numericUpDown10.Value = 0;
+        }
     }
 }

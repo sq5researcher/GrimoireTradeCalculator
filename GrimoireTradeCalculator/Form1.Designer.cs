@@ -55,6 +55,7 @@
             button1 = new Button();
             groupBox2 = new GroupBox();
             richTextBox1 = new RichTextBox();
+            button2 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
@@ -330,11 +331,22 @@
             richTextBox1.TabStop = false;
             richTextBox1.Text = "";
             // 
+            // button2
+            // 
+            button2.Location = new Point(307, 155);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 13;
+            button2.Text = "リセット";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(523, 452);
+            Controls.Add(button2);
             Controls.Add(groupBox2);
             Controls.Add(button1);
             Controls.Add(numericUpDown11);
@@ -393,5 +405,6 @@
         private Button button1;
         private GroupBox groupBox2;
         private RichTextBox richTextBox1;
+        private Button button2;
     }
 }
